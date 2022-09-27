@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import './App.css';
+import InputField from './components/InputField/InputField';
 import User from './components/User/User';
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
   }
   return (
     <div className="App">
-        { !toggleIsCompleted ? <User value={username} updateUsername={updateUsername} onCkickSave={onCkickSave} /> : <div>Todo list</div> }
+        { !toggleIsCompleted ? <User value={username} updateUsername={updateUsername} onCkickSave={onCkickSave} /> : <InputField /> }
         
     </div>
   );
