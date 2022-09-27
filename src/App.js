@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
 import './App.css';
+import User from './components/User/User';
 
 function App() {
+  const [toggleIsCompleted, setToggleIsCompleted] = useState(false);
+  const [username, setUsername] = useState('');
+ 
+ const updateUsername = (value) => {
+    setUsername(value)
+ }
+  const onCkickSave = () => {
+      if(username.trim()){
+        setToggleIsCompleted(true);
+      }
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        { !toggleIsCompleted ? <User value={username} updateUsername={updateUsername} onCkickSave={onCkickSave} /> : <div>Todo list</div> }
+        
     </div>
   );
 }
