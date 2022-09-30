@@ -9,10 +9,8 @@ function TodoList() {
   return (
     <div className={s.todoList}>
       {todos.map(item => <TodoItem key={item.id} {...item} />)}
-      <button>active</button>
-      <button>inactive</button>
     </div>
   )
 }
 
-export default TodoList
+export default TodoList;

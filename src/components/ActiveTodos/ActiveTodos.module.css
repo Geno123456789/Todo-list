@@ -1,14 +1,16 @@
-.container {
-    color: #18cfab
+.activeTodosContainer {
+    text-align: center;
+    color: #ffffff;
 }
-.container input {
-    height: 36px;
+.activeTodosContainer h2 {
+    margin-top: 20px;
+    font-size: 36px;
+}
+.activeTodosContainer li {
+    margin-bottom: 20px;
     font-size: 24px;
-    padding-left: 5px;
-    width: 450px;
-    border-radius: 8px;
 }
-.container button {
+.activeTodosContainer button {
     background: none;
     border:none;
     background-color: #18cfab;
@@ -20,7 +22,5 @@
     margin: 0 14px;
     cursor: pointer;
     text-transform: uppercase;
+    margin-top: 20px;
 }
-li {
-    list-style: none;
-  }
