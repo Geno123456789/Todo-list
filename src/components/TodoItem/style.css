@@ -20,14 +20,16 @@
 .btnContainer {
     margin-left: auto;
 }
-.itemContainer img {
-    width: 30px;
-    height: 30px;
-    margin-left: 15px;
+.itemContainer .btnContainer button {
+    width: 35px;
+    height: 35px;
+    margin: 0px;
+    padding: 0px;
     cursor: pointer;
+    background: none;
 }
-.itemContainer button {
-    padding: 7px 26px;
+.itemContainer .saveBtn {
+    padding: 10px 26px;
     font-size: 14px;
     margin: 5px 14px;
 }
