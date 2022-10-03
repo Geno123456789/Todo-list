@@ -1,26 +1,25 @@
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import ActiveTodos from './components/ActiveTodos/ActiveTodos.tsx'
+import InactiveTodos from './components/InactiveTodos/InactiveTodos'
+import TodosPage from './components/TodosPage/TodosPage.tsx'
+import UserPage from './components/UserPage/UserPage'
 
-import { useState } from 'react';
-import './App.css';
-import User from './components/User/User';
 
 function App() {
-  const [toggleIsCompleted, setToggleIsCompleted] = useState(false);
-  const [username, setUsername] = useState('');
- 
- const updateUsername = (value) => {
-    setUsername(value)
- }
-  const onCkickSave = () => {
-      if(username.trim()){
-        setToggleIsCompleted(true);
-      }
-  }
   return (
-    <div className="App">
-        { !toggleIsCompleted ? <User value={username} updateUsername={updateUsername} onCkickSave={onCkickSave} /> : <div>Todo list</div> }
-        
+    <div className='App'>
+      <Routes>
+        <Route path='/' element={<UserPage />} />
+        <Route path='/todos' element={<TodosPage />} />
+        <Route path='/active' element={<ActiveTodos />} />
+        <Route path='/inactive' element={<InactiveTodos />} />
+      </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
+
+

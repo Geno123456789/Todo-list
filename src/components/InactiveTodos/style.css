@@ -1,0 +1,27 @@
+.inactiveTodosContainer {
+    text-align: center;
+    color: #ffffff;
+}
+.inactiveTodosContainer h2 {
+    margin-top: 20px;
+    font-size: 36px;
+}
+.inactiveTodosContainer li {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-decoration: line-through;
+}
+.inactiveTodosContainer button {
+    background: none;
+    border:none;
+    background-color: #18cfab;
+    color: #ffffff;
+    padding: 9px 26px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin: 0 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
